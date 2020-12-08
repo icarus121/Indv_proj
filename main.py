@@ -50,11 +50,22 @@ class GetHandler(BaseHTTPRequestHandler):
 
 class RouteHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == '/index/':
-            self.path = '/index/index.html'
-        elif self.path == '/goodbye/':
-            self.path = '/goodbye/goodbye.html'
-        elif self.path == '/information/':
+        if self.path == '/season/':
+            self.path = '/season/season.html'
+
+        elif self.path == '/winter/':
+            self.path = '/winter/winter.html'
+
+        elif self.path == '/spring/':
+            self.path = '/spring/spring.html'
+
+        elif self.path == '/autumn/':
+            self.path = '/autumn/autumn.html'
+
+        elif self.path == '/summer/':
+            self.path = '/summer/summer.html'
+
+        elif self.path == '/?/':
             return GetHandler.do_GET(self)
         else:
             super(RouteHandler, self).do_GET()
