@@ -86,7 +86,7 @@ if __name__ == '__main__':
     if sys.argv[1:]:
        port = int(sys.argv[1])
     else:
-       port = 8888
+       port = 8080
 
     '''
     This sets the working directory of the HTTPServer, defaults to directory where $
